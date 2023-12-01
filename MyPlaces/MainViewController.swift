@@ -47,5 +47,10 @@ class MainViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    // for cancel action: new place -> main page
+    @IBAction func cancelAction(_ segue: UIStoryboardSegue) {}
 
 }
