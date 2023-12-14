@@ -3,8 +3,7 @@
 //  MyPlaces
 //
 //  Created by Алибек Рамазан on 30.11.2023.
-//
-// fkldjnfkljd
+// kdjnfkdlnf
 
 import UIKit
 
