@@ -120,6 +120,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-Pl-haj">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -259,13 +260,21 @@
                     <navigationItem key="navigationItem" title="New place" id="apF-gN-jNO">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kur-qw-NYj">
                             <connections>
-                                <segue destination="6CT-Gl-Yln" kind="unwind" unwindAction="cancelAction:" id="M6a-4e-ygn"/>
+                                <action selector="cancelAction:" destination="mgo-hT-lvn" id="2d9-N8-Tpa"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TKN-wM-MeK"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TKN-wM-MeK">
+                            <connections>
+                                <segue destination="6CT-Gl-Yln" kind="unwind" unwindAction="unwindSegue:" id="l1h-ZB-49F"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageOfPlace" destination="Kx5-Pl-haj" id="KLH-QV-cQk"/>
+                        <outlet property="placeImage" destination="Kx5-Pl-haj" id="KLH-QV-cQk"/>
+                        <outlet property="placeLocation" destination="NPj-x6-fPd" id="9yg-RX-hMA"/>
+                        <outlet property="placeName" destination="F8O-7m-RPN" id="UNT-Y7-ABU"/>
+                        <outlet property="placeType" destination="E5b-3B-LqE" id="3oS-g1-pU8"/>
+                        <outlet property="saveButton" destination="TKN-wM-MeK" id="CeX-09-uXu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDf-im-Y7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -314,6 +323,9 @@
     </scenes>
     <resources>
         <image name="Photo" width="195" height="196"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
